@@ -138,10 +138,11 @@ const Customizer = () => {
                 {generateTabContent()}
               </div>
             </div>
+            
           </motion.div>
-
+                  
           <motion.div
-            className="absolute z-10 top-5 right-5"
+            className="absolute z-10 top-5 right-5 "
             {...fadeAnimation}
           >
             <CustomButton 
@@ -150,6 +151,19 @@ const Customizer = () => {
               handleClick={() => state.intro = true}
               customStyles="w-fit px-4 py-2.5 font-bold text-sm"
             />
+          </motion.div>
+
+          <motion.div
+            className="absolute z-10 bottom-5 right-96"
+            {...fadeAnimation}
+          >
+            <button className='download-btn' onClick={downloadCanvasToImage}>
+              <img
+                src={download}
+                alt='download_image'
+                className='w-3/5 h-3/5 object-contain'
+              />
+            </button>
           </motion.div>
 
           <motion.div
@@ -166,6 +180,7 @@ const Customizer = () => {
               />
             ))}
           </motion.div>
+          
         </>
       )}
     </AnimatePresence>
